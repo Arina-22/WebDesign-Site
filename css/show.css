@@ -94,7 +94,7 @@ body{
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.button-text > a{
+.button-text{
     text-decoration: none;
     color: #000;
 }
@@ -106,29 +106,28 @@ body{
     cursor: pointer;
 }
 
-.button:hover > .button-text > a{
+.button:hover > .button-text{
     color: #fff;
 }
 
 .button-text{
     align-self: center;
     text-align: center;
-    font-size: clamp(14px, 3vw, 20px);
+    font-size: clamp(13px, 2.3vw, 20px);
 }
 
 .homesection > .container{
     margin-top: clamp(60px, 7vw, 140px);
 }
 
-.homesection > .container > .button:first-child{
-    margin-top: 120px;
-    margin-left: 80%;
+.homesection > .container > .button{
+    margin: 50px auto 0;
 }
 
 .main-headline{
-    font-size: clamp(50px, 17vw, 225px);
+    font-size: clamp(55px, 8.5vw, 100px);
     font-weight: 400;
-    margin: 0 auto;
+    margin: clamp(100px, 13vw, 150px) auto 0;
     text-align: center;
 }
 
@@ -139,204 +138,37 @@ body{
     font-weight: 400;
 }
 
-.postheadline{
-    max-width: 57%;
-    text-align: left;
-    line-height: 130%;
-    margin-left: 28.5%;
-}
-
 .main-img{
-    max-width: 66%;
-    max-height: 68vh;
-    background: url(../img/main-img.png) no-repeat center;
-    margin: 60px auto 0;
+    width: 85%;
+    height: 56vh;
+    background: url(../img/show-main-img.png) no-repeat center;
+    margin: clamp(40px,7vw, 90px) auto clamp(30px,5vw, 60px);
 }
 
-.main-img > p {
-    font-size: 80px;
-    color: #fff;
-    padding-top: 19vh;
-    padding-left: 3vw;
-    font-weight: 400;
+.postheadline{
+    max-width: 85%;
+    margin: clamp(40px,7vw, 90px) auto;
 }
 
-.main-img > p::first-letter{
-    padding-left: 80px;
+.show-section{
+    margin-top: 60px;
 }
 
-.main-img > p > span {
-    color: #000;
-}
-
-.homesection > .container > .button:nth-last-child(2){
-    margin: 170px auto 0;
-}
-
-.text-section{
-    margin-top: 80px;
+.show-container{
     display: flex;
-    gap:186px;
-}
-
-.text-section > p {
-    max-width: 42%;
-    line-height: 130%;
-}
-
-.gallery-section{
-    margin-top: clamp(60px, 12vw, 165px);
-}
-
-.gallery{
-    margin-top: clamp(30px,7vw,100px);
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px clamp(30px, 12vw, 190px);
     justify-content: center;
-    gap: clamp(60px, 9vw, 100px);
 }
 
-.second-headline{
-    font-size: clamp(40px, 6vw, 80px);
-    font-weight: 400;
-    align-self: center;
-    margin-left: 28.5%;
+.show-content{
+    width: 35%;
 }
 
-.gallery >.img-section{
-    display: flex;
-    gap: 20px;
-}
-
-.gallery >.img-section:nth-child(2){
-    flex-direction: row-reverse;
-}
-
-.gallery >.img-section > .img{
-    width: 73%;
-    background-repeat: no-repeat;
-}
-
-.gallery >.img-section:first-child > .img{
-    max-height: 80vh;
-    background: url(../img/Gallery-img1.png) no-repeat center;
-}
-
-.gallery >.img-section:nth-child(2) > .img{
-    max-height: 120vh;
-    background: url(../img/Gallery-img2.png) no-repeat center;
-}
-
-.gallery >.img-section:nth-child(3) > .img{
-    max-height: 74vh;
-    background: url(../img/Gallery-img3.png) no-repeat center;
-}
-
-.gallery >.img-section > .details{
-    width: 27%;
-    display: flex;
-    flex-direction: column;
-}
-
-.date{
-    align-self: start;
-    font: clamp(20px, 2.1vw, 30px) Montserrat, sans-serif;
-}
-
-.description{ 
-    margin-top: 100%;  
+.show-content> .show-description{
     font-size: 12px;
     line-height: 130%;
-    font-weight: 500;
-}
-
-.gallery-section >.container > .button{
-    margin: 70px auto 0;
-}
-
-.faq-section{
-    margin-top: clamp(60px, 9vw, 100px);
-}
-
-.questions {
-    margin-top: 36px;
-    display: grid;
-    grid-template-columns: 30% 43% 27%;
-    grid-template-rows: 163px 211px 163px 211px 183px;
-}
-  
-.question:nth-child(1){
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    border: 1px solid #000;
-    border-bottom: none;
-}
-
-.question:nth-child(2){
-    grid-row-start: 2;
-    grid-row-end: 4;
-    grid-column: 1;
-    border: 1px solid #000;
-}
-
-.faq-img1{
-    grid-row: 2;
-    grid-column: 2;
-    background: url(../img/FAQ-img1.png) no-repeat center;
-}
-
-.question:nth-child(4){
-    grid-row: 3;
-    grid-column: 2;
-    border-bottom: 1px solid #000;
-}
-
-.question:nth-child(5){
-    grid-row: 4;
-    grid-column: 2;
-    border-left: 1px solid #000;
-}
-
-.faq-img2{
-    grid-row-start: 3;
-    grid-row-end: 5;
-    grid-column: 3;
-    background: url(../img/FAQ-img2.png) no-repeat right;
-}
-
-.question:nth-child(7){
-    grid-row: 5;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border: 1px solid #000;
-}
-
-.question{
-    padding: 25px;
-}
-
-.question>p{
-    font-size: clamp(14px, 1.8vw, 20px);
-    font-weight: 300;
-    margin-top: 10px;
-    text-transform: none;
-    line-height: 130%;
-}
-
-.question>h3{
-    font-size: clamp(20px, 2.5vw, 30px);
-    font-weight: 400;
-    text-transform: none;
-}
-
-.question > p > a{
-    color: #000;
-}
-
-.faq-section > .container > .button{
-    margin: clamp(40px, 5vw, 70px) auto 0;
+    padding: 20px 0 0 0;
 }
 
 .footer{
@@ -344,7 +176,7 @@ body{
 }
 
 .footer > .container{
-    margin-top: clamp(40px, 5vw, 70px);
+    margin-top: 100px;
     display: grid;
     grid-template-rows: clamp(300px,65vh, 450px);
     grid-template-columns: 28% 44% 28%;
@@ -429,51 +261,9 @@ nav > h2, .social > h2{
     padding-top: 165px;
 }
 
-
-@media (max-width:1200px){
-    .main-img > p {
-        font-size: clamp(40px, 6.713vw , 70px);
-        padding-top: 25.5vh;
-        padding-left: 3vw;
-    }
-}
-
 @media (max-width:850px){
-    .postheadline{
-        font-size: 15px;
-    }
-
-    .main-img > p {
-        font-size: clamp(40px, 5.5vw , 60px);
-        padding-top: 15vh;
-        padding-left: 3vw;
-    }
-
-    .main-img > p > span {
-        color: #fff;
-    }
-
-    .text-section{
-        margin-top: clamp(40px, 7vw , 80px);
-        gap:clamp(100px, 15vw, 186px);
-    }
-    
-    .text-section > p {
-        max-width: 42%;
-        line-height: 130%;
-        font-size: 15px;
-    }
-
-    .homesection > .container > .button:first-child{
-        margin-top: clamp(90px, 11vw, 120px);
-    }
-
-    .homesection > .container > .button:nth-last-child(2){
-        margin-top: clamp(50px, 8vw, 170px);
-    }
-
-    .question{
-        padding: 20px;
+    .show-content{
+        width: 85%;
     }
 
     .footer > .container{
@@ -511,71 +301,14 @@ nav > h2, .social > h2{
 }
 
 @media (max-width:600px){
-    .main-headline{
-        margin-top: 10px;
-    }
-
     .main-img{
         max-width: 90%;
         max-height: 66vh;
         margin: 30px auto 0;
     }
 
-    .postheadline > br{
-        display: none;
-    }
-
     .postheadline{
-        margin-left: 21%;
-    }
-
-    .text-section{
-        flex-direction: column;
-        gap:30px;
-        padding-left: 30px;
-    }
-    
-    .text-section > p {
-        max-width: 95%;
-    }
-
-    .gallery >.img-section{
-        flex-direction: column;
-    }
-
-    .gallery >.img-section:nth-child(2){
-        flex-direction: column;
-    }
-
-    .gallery >.img-section > .details{
-        width: 95%;
-    }
-
-    .gallery >.img-section > .img{
-        width: 100%;
-        height: 50vh;
-    }
-
-    .details > .description{
-        margin-top: 12px;
-    }
-
-    .gallery-section >.container > .button{
-        margin: 40px auto 0;
-    }
-
-    .questions{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .question:nth-child(4){
-        border: 1px solid #000;
-        border-top: none;
-    }
-
-    .question:nth-child(5){
-        border-right: 1px solid #000;
+        font-size: 16px;
     }
 
     .footer > .container{
@@ -635,17 +368,9 @@ nav > h2, .social > h2{
     .footer-links > li, .social-links > li{
         font-size: 15px;
     }
-
-    .homesection > .container > .button:first-child{
-        margin-left: clamp(260px, 70vw, 450px);
-    }
 }
 
 @media (max-width:480px){
-    .main-img > p{
-        font-size: clamp(24px, 6vw, 40px);        
-    }
-
     .header { 
         font-size: clamp(12px, 1.2vw, 16px);
         padding: clamp(10px, 1.4vw, 20px) 0 0;
@@ -659,17 +384,19 @@ nav > h2, .social > h2{
         margin-top: 10px;
     }
 
-    .homesection > .container > .button:first-child{
-        margin: 70px 22% 0;
-    }
-
-    .second-headline{
-        margin: 0;
+    .main-headline{
+        margin-top: 70px;
+        /* margin-left: 30px;
+        text-align: left; */
     }
 }
 
 @media (max-width:360px){
     .header> nav{
         gap: 10px;
+    }
+
+    .show-content{
+        width: 95%;
     }
 }

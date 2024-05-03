@@ -421,10 +421,14 @@ nav > h2, .social > h2{
         grid-row: 1;
         grid-column: 1;
         flex-direction: row;  
-        padding-top: 20px;     
+        padding-top: 40px;     
     }
 
-    .footer-title, .social-title{
+    .footer-title{
+        font-size: 20px;
+    }
+
+    h2.social-title{
         font-size: 20px;
     }
 
